@@ -1,7 +1,9 @@
-import Navibar from './Components/Navibar';
+import './assets/App.scss';
+import { RouterProvider } from 'react-router-dom';
+import router from './router/router';
 
 const App = () => (
-  <Navibar />
+  <RouterProvider router={router} />
 );
 
 export default App;

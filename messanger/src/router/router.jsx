@@ -1,20 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Login from './pages/login';
-import NavigationBar from './Components/NavigationBar';
-import Home from './pages/Home';
+import Login from '../pages/Login';
+import NavigationBar from '../Components/Navigation/NavigationBar';
+import Home from '../pages/Home';
+import NotFound from './notFound';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <NavigationBar />,
+    errorElement: <NotFound />,
     children: [
       {
-        element: <Login />,
+        element: <Home />,
         index: true,
       },
       {
         path: '/login',
-        element: <Home />,
+        element: <Login />,
       },
     ],
   },
